@@ -1,10 +1,14 @@
-const { Router } = require("express");
 const express = require("express");
 
 const app = express();
 
-const port = proccess.env.PORT || 4000;
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+    console.log("Se conectó");
+})
 
 app.get("/", (req, res, next) => {
-    <h1>El puerto es `${port}`</h1>
+
+    res.send("<h1>test</h1>");
 })
